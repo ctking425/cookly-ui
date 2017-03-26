@@ -1,0 +1,19 @@
+{
+    "recipe": [
+        {
+            "id": 1,
+            "name": "Shrimp Tacos",
+            "description": "These are the greatess shrimp tacos since people started putting shimp into tacos"
+        },
+        {
+            "id": 2,
+            "name": "Beef Fajites",
+            "description": "They sizzle"
+        },
+        {
+            "id": 3,
+            "name": "Corndob",
+            "description": "It's meat on a stick!"
+        }
+    ]
+}
