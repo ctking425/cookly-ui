@@ -1,28 +1,10 @@
 <h2 class="page-title">My Recipes</h2>
 
-<div class="panel">
-    <div class="panel-header">
-        Shrimp Tacos
+<div *ngFor="let recipe of recipes" class="panel">
+    <div [routerLink]="['/recipe', recipe.id]" class="panel-header">
+        {{recipe.name}}
     </div>
     <div class="panel-content">
-        This is the description for the panel tacos;
-    </div>
-</div>
-
-<div class="panel">
-    <div class="panel-header">
-        Beef Fajitas
-    </div>
-    <div class="panel-content">
-        This is the description for the panel tacos;
-    </div>
-</div>
-
-<div class="panel">
-    <div class="panel-header">
-        Chicken Chalupa
-    </div>
-    <div class="panel-content">
-        This is the description for the panel tacos;
+        {{recipe.description}}
     </div>
 </div>

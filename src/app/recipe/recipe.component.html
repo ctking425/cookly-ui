@@ -1,3 +1,23 @@
-<p>
-  recipe works!
-</p>
+<div  class="recipe-page">
+  <div *ngIf="recipe">
+    <div class="recipe-title">{{recipe.name}}</div>
+    <hr />
+    <div class="recipe-description">{{recipe.description}}</div>
+    <div class="ingredients-panel">
+      Ingredients
+      <ul class="ingredients-list">
+        <li *ngFor="let ingredient of recipe.ingredients">
+          <span class="ingredient-amount">{{ingredient.quantity | fraction}} {{ingredient.unit}}</span> - {{ingredient.name}}
+        </li>
+      </ul>
+    </div>
+    <div class="steps-panel">
+      Instructions
+      <ol>
+        <li *ngFor="let step of recipe.steps">
+          {{step.instructions}}
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

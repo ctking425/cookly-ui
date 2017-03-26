@@ -9,11 +9,15 @@ import { AppComponent } from './app.component';
 import { MyRecipesComponent } from './my-recipes/my-recipes.component';
 import { RecipeComponent } from './recipe/recipe.component';
 
+import { RecipeService } from './recipe.service';
+import { FractionPipe } from './pipes/fraction.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     MyRecipesComponent,
-    RecipeComponent
+    RecipeComponent,
+    FractionPipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { RecipeComponent } from './recipe/recipe.component';
     MaterialModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    RecipeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
